@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shipper</title>
+
+    <!-- BootStrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/shipper.css">
+    <link rel="stylesheet" href="../../login/css/login.css">
+
+
+    <!-- JavaScript -->
+    <script src="../js/shipper.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container-fluid d-flex justify-content-between bg-dark fw-bold position-fixed top-0" id="header">
+            <a class="navbar-brand ms-5" href="#" id="h_logo">
+                <img src="./logo.png" alt="logo" class="rounded-circle  bg-warning" id="logo">
+            </a>
+            <a href="../../www/index.php" class="nav-link link-light" >Login</a>
+        </div>
+    </header>
+    <main class="main content">
+        <div class="container-fluid d-flex justify-content-center mt-5">
+            <hr>
+            <h5 class="h5" style="color: gray;">
+                Shipper Registration
+            </h5>
+            <hr>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center mt-5">
+            <hr>
+            <h5 class="h5" style="color: gray;">
+                Shipper Registration
+            </h5>
+            <hr>
+        </div>
+        
+        <div class="container-fluid d-flex justify-content-center fw-bold" id="vendor-form">  
+            <form action="../php/shipper.php"  method="post" autocomplete="on" enctype="multipart/form-data" onsubmit="return verifyData();">
+                <div class="mb-3 mt-5">
+                    <label for="s-username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="s-username" name="s-username" pattern="[A-Z a-z 0-9]{8,15}" title="Min-length is 8! No Special Characters allowed!" required>
+                </div>
+                <div class="mb-3">
+                  <label for="s-password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="s-password" name="s-password" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*]).{8,20}" required> 
+                  <div class="container d-flex justify-content-center">
+                      <button type="button" class="form-control btn btn-warning w-50 mt-3 fw-bold" onclick="showPassWord();" id="showPass">Show Password</button>
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label for="s-profile" class="form-label">Profile Picture</label>
+                    <input type="file" class="form-control" name="s-profile" id="s-profile" required>
+                </div>
+                <div class="mb-3">
+                    <label for="hub" class="form-label">Choose Your Distribution Hub</label>
+                    <div class="dropdown d-flex justify-content-center">
+                        <select class="form-select bg-primary fw-bold d-flex text-center m-auto" aria-label="Default select example" name="hub" id="hub">
+                            <option selected disabled class="bg-light fw-bold ms">Distribution Hub</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="container-fluid d-flex justify-content-center mt-5" id="register">
+                    <hr>
+                    <button type="submit" class="btn btn-primary mb-5" id="submit" name="submit">Register</button>
+                    <hr>
+                </div>
+              </form>
+        </div>
+        <div class="container-fluid d-flex justify-content-center mt-5">
+            <hr>
+            <h5 class="h5" style="color: gray;">
+                Registered More Accounts?
+            </h5>
+            <hr>
+        </div>
+        <!-- Register Different Accounts  -->
+        <div class="container-fluid d-flex flex-column w-25 gap-3 justify-content-center mb-3" id="category">
+            <button type="button" class="btn btn-warning fw-bold" onclick="directToCustomerPage();">Create New Customer Account</button>
+            <button type="button" class="btn btn-info fw-bold" onclick="directToVendorPage();">Create New Vendor Account</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid bg-dark mt-auto" id="footer">
+            <div class="navbar d-flex flex-column">
+                <ul class="nav d-flex fw-bold">
+                    <li class="nav-item">
+                        <a href="../../static/about.html" class="nav-link link-light">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../copyright/about.html" class="nav-link link-light">Copyright</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../privacy/about.html" class="nav-link link-light">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../help/about.html" class="nav-link link-light">Help Links</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

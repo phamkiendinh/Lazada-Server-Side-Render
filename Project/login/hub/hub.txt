@@ -1,0 +1,15 @@
+[
+    {
+        "name": "VNExpress",
+        "address" : "123 Street"
+    },
+    
+    {
+        "name": "Vietnam Airport",
+        "address" : "789 Street"
+    },
+    {
+        "name": "VietNam Railway",
+        "address" : "456 Street"
+    }
+]

@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#account-profile {
+    height: 50px;
+    width: 100px;
+}
+
+header {
+}
+
+main {
+    margin-top: 100px;
+}
+
+#logo {
+    height: auto;
+    width: auto;
+    max-height: 70px;
+    max-width: 100px;
+}
+
+#new-profile {
+    display: none;
+}
+
+#change-profile {
+    display: none;
+}

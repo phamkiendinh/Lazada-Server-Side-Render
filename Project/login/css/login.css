@@ -1,0 +1,31 @@
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+hr {
+    width: 15%;
+}
+
+#register hr {
+    background-color: blue;
+    width: 100%;
+}
+
+#logo {
+    height: auto;
+    width: auto;
+    max-height:70px;
+    max-width: 100px;
+}
+
+.nav-link:hover {
+    color: black;
+    background-color: white;
+}

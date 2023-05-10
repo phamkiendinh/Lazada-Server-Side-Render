@@ -1,0 +1,18 @@
+#cart-icon:hover {
+    color: white;
+}
+
+.remove-item {
+    max-height: 50px;
+}
+
+hr {
+    border: 2px solid rgb(0, 255, 115);
+    border-radius: 5px;
+}
+
+.product-profile {
+    max-width: 500px;
+    max-height: 200px;
+    margin-right: 5%;
+}
