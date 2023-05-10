@@ -1,0 +1,85 @@
+:root {
+    --color_dark: hsl(252, 30%, 27%);
+    --color_white: hsl(252, 30%, 100%);
+    --color_light: hsl(252, 30%, 95%);
+    --color_gray: hsl(252, 15%, 65%);
+    --color_primary: rgba(96, 28, 40, 0.849);
+    --color_secondary: hsl(252, 100%, 90%);
+    --color_success: hsl(120, 95%, 65%);
+    --color_danger: hsl(0, 95%, 65%);
+    --color_black: hsl(252, 30%, 10%);
+
+    --border_radius: 15px;
+    --card_border_radius: 1rem;
+    --btn_padding: 0.4rem 1.2rem;
+    --card_padding: 1rem;
+
+    --sticky_top_left: 5.4rem;
+    --sticky_top_right: -18rem;
+}
+
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    /* xóa những mặc định trình duyệt mà web tự thêm */
+    box-sizing: border-box;
+    /* giúp các thẻ margin padding vẫn đủ kích thước */
+}
+
+html{
+    font-size: 16px;
+    /* neu ko khai bao font sixe thi mawc dinh trinh duyet laf 16px 
+    1 rem = 16px */
+}
+
+body{
+    background-color: rgba(33, 37, 41, 0.95);
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* CAROUSEL */
+.carousel .carousel__content{
+    background-image: url(/image/provision.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    opacity: 0.8;
+}
+.carousel__content h1{
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+}
+
+/* PROVISION */
+.provision__item, .provision__content h3{
+    padding: 3% 15% 0;
+}
+.row{
+    margin: 2%;
+}
+.provision__item .provision__col img{
+    width: 100%;
+}
+.provision__item1{
+    position: relative;
+    padding-top: 5%;
+}
+.provision__picture img{
+    width: 100%;
+    padding-left: 30%;
+    opacity: 0.7;
+}
+.provision__text{
+    position: absolute;
+    top: 0;
+    padding-top: 15%;
+}
+@media screen and (max-width:767px) {
+  .provision__text p:first-of-type{
+    visibility: hidden;
+  }
+}

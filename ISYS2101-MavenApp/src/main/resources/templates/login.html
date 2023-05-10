@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="eng">
+<head>
+    <!-- This was made by Dinh Pham
+         Last Change: August 1st, 2022-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link rel="stylesheet" href="/css/home_header.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login</title>
+    <link rel="shortcut icon" href="/image/logo.PNG" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header></header>
+
+    <main class="hero">
+        <!-- <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand" href="/" id="h_logo">
+                <img src="image/logo.JPG" alt="logo" class="rounded-circle">
+            </a>
+        </div> -->
+        <div class="container-fluid" id="form">  
+            <div class="button_box">
+                <div id="btn_tg"></div>
+                <button type="button" class="toggle" onclick="login()">Log in</button>
+                <button type="button" class="toggle" onclick="register()">Register</button>
+            </div>
+            <form th:action="@{/login}" class="input_group" id="login" method="post">
+                <div class="mb-3 mt-5">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control input_field" name="email" id="email" placeholder="Enter email" required >
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control input_field" name="password" id="password" placeholder="Enter password" required>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="checkBox">
+                    <label class="form-check-label" for="checkBox" id="checkBoxLabel">Remember Me</label>
+                </div>
+                <button type="submit" class="btn btn-primary log" name="submit" id="submit" value="log in">Login</button>
+            </form>
+
+            <form th:action="@{/register}" class="input_group" id="register">
+                <div class="mb-1">
+                    <label for="name" class="form-label">Fullname</label>
+                    <input type="text" class="form-control input_field" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-1">
+                    <label for="r_email" class="form-label">Email address</label>
+                    <input type="email" class="form-control input_field" id="r_email" placeholder="Enter email" required>
+                </div>
+                <div class="mb-1">
+                    <label for="r_password" class="form-label">Password</label>
+                    <input type="password" class="form-control input_field" id="r_password" placeholder="Enter password" required>
+                </div>
+                <div class="mb-1">
+                    <label for="re_password" class="form-label">Retype password</label>
+                    <input type="password" class="form-control input_field" id="re_password" placeholder="Retype password" required>
+                </div>
+                <div class="mb-1 form-check">
+                    <input type="checkbox" class="form-check-input" id="checkBox">
+                    <label class="form-check-label" for="checkBox" id="checkBoxLabel">I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn btn-primary log" id="r_submit">Register</button>
+            </form>
+        </div>
+        <div class="container-fluid d-flex justify-content-center" id="register_h5">
+            <hr>
+            <h5 class="h5" style="color: gray;">
+                New to Avenger?
+            </h5>
+            <hr>
+        </div>
+        <div class="container-fluid d-flex justify-content-center" id="re">
+            <button type="button" class="btn btn-warning"> <a onclick="register()" class="link link-primary">Create New Account</a></button>
+        </div>
+    </main>
+
+    <script>
+        var x = document.getElementById('login')
+        var y = document.getElementById('register')
+        var z = document.getElementById('btn_tg')
+
+        function register() {
+            x.style.left = "-100%";
+            y.style.left = "10%"
+            z.style.left = "110px"
+        }
+        function login() {
+            x.style.left = "10%";
+            y.style.left = "110%"
+            z.style.left = "0px"
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('header').load('/home_header')
+        })
+    </script>
+<!--    <script src="js/login.js"></script>-->
+</body>
+</html>

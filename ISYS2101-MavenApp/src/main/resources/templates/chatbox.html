@@ -1,0 +1,54 @@
+
+        <!-- Chat Form -->
+        <div class="bg-dark border border-5 border-danger" id="chat-container">
+
+            <!-- Chat Header -->
+            <div class="d-flex justify-content-between mb-2 d-flex flex-row position-sticky" id="chat-header">
+                <button class="btn btn-info mt-1 ms-1 fw-bold" type="button" id="chat-info" onclick="showInfo();">
+                    <i class="bi bi-info-circle"></i> Info
+                </button>
+
+                <button class="btn btn-primary mt-1 ms-1 fw-bold h-50" type="button" id="chat-chat" onclick="startChat();">
+                    <i class="bi bi-wechat"></i> Chat
+                </button>
+
+                <button class="btn mt-1 bg-light fw-bold" id="chat-close" onclick="hideChat();">
+                    <i class="bi bi-x-square-fill"></i> Exit
+                </button>
+            </div>
+
+            <!-- Chat Body -->
+
+            <div class="border border-2 border-dark bg-light" id="chat-body">
+                <!-- Sender Example -->
+                <!-- <div class="container-fluid d-flex gap-1 chat-body-sender">
+                    <div class="chat-body-sender-message mt-2 mb-2 bg-info">
+                        <span>What is the fastest way to subway of Ho CHi Minh city?</span>
+                    </div>
+                    <div class="profile-icon">
+                        <i class="bi bi-person-square"></i>
+                    </div>
+                </div> -->
+
+                <!-- Receiver Sample -->
+                <!-- <div class="container-fluid d-flex gap-3 chat-body-receiver">
+                    <div class="server-icon">
+                        <i class="bi bi-server"></i>
+                    </div>
+                    <div class="chat-body-receiver-message mt-2 mb-2 bg-warning">
+                        <span>Go through Le Loi street 1</span>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Chat Message Sender -->
+            <div class="border border-3 border-primary bg-light rounded" id="chat-div">
+                <form onsubmit="updateMessage(); return false;">
+                    <div class="d-flex">
+                        <input class="form-control w-75" type="text" name="message" id="message" placeholder="Enter Your Message...">
+                        <button class="form-control w-25 btn btn-primary border border-1 border-dark" type="submit">Send</button>
+                        <button class="form-control btn btn-primary d-none" type="reset" id="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>

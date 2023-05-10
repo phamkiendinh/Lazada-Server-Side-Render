@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home_header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/vourcher.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Voucher</title>
+    <link rel="shortcut icon" href="/image/logo.PNG" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body class="body">
+    <header></header>
+
+    <!--Voucher section-->
+    <main class="container mb-5">
+        <!--Introduction-->
+        <div class="m-3 mb-5">
+            <h2>Avenger</h2>
+            <h3>Special gifts for newbie and novice user</h3>
+        </div>
+
+        <!--Voucher Categories-->
+        <div class="border bg-white rounded-3 position-relative">
+            <div class="voucher__title position-absolute">Gifts categories</div>
+
+            <!--Voucher-->
+            <div class="row p-5 d-flex justify-content-between">
+                <div class="voucher__item col-3 position-relative mb-sm-4 mb-md-0" onclick="alert('Congratulation! You have got the love voucher')">
+                    <img class="img-fluid rounded-3 h-100" src="/image/voucher1.jpeg">
+                    <div class="voucher__name position-absolute rounded-3 bottom-0 start-50 translate-middle bg-white top w-100 lh-lg text-center fw-bold">Couple Voucher</div>
+                </div>
+
+                <div class="voucher__item col-3 position-relative mb-sm-4 mb-md-0" onclick="alert('Congratulation! You have got the birthday voucher')">
+                    <img class="img-fluid rounded-3 h-100" src="/image/voucher2.jpeg">
+                    <div class="voucher__name position-absolute rounded-3 bottom-0 start-50 translate-middle bg-white top w-100 lh-lg text-center fw-bold">Birthday Voucher</div>
+                </div>
+
+                <div class="voucher__item col-3 position-relative mb-sm-4 mb-md-0" onclick="alert('Congratulation! You have got the discount voucher')">
+                    <img class="img-fluid rounded-3 h-100" src="/image/voucher3.jpeg">
+                    <div class="voucher__name position-absolute rounded-3 bottom-0 start-50 translate-middle bg-white top w-100 lh-lg text-center fw-bold">Discount Voucher</div>
+                </div>
+            </div>
+        </div>
+        <!-- Terms and conditions -->
+        <div class="voucher__term">
+            <h3>Terms & Conditions</h3>
+            <div class="term__content">
+                <ul>
+                    <li>The voucher is valid until 180 days from the date of issuance.</li>
+                    <li>The voucher can be redeemed at restaurants or for ordering delivery on website.</li>
+                    <li>The voucher is valid for one bill only, one bill can be redeemed by many vouchers.</li>
+                    <li>The voucher is non-refundable and cannot be exchanged for cash in part or full.</li>
+                    <li>Expired vouchers and “already redeemed” vouchers will be rejected to be redeemed.</li>
+                    <li>Guests will settle the exceeding amount when the bill value is higher than the voucher/s value.</li>
+                    <li>Avenger is responsible for issuing VAT invoices upon guest requests.</li>
+                    <li>Guests are responsible for the security of the voucher codes after purchasing. Giftpop and Avengers are not responsible for the compensation of lost or unintentionally redeemed voucher codes under any circumstances.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+    <script>
+        $(document).ready(function() {
+            $('header').load('/home_header')
+            $('footer').load('/footer')
+        })
+    </script>
+</body>
+</html>

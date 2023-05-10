@@ -1,0 +1,75 @@
+:root {
+    --color_dark: hsl(252, 30%, 27%);
+    --color_white: hsl(252, 30%, 100%);
+    --color_light: hsl(252, 30%, 95%);
+    --color_gray: hsl(252, 15%, 65%);
+    --color_primary: rgba(96, 28, 40, 0.849);
+    --color_secondary: hsl(252, 100%, 90%);
+    --color_success: hsl(120, 95%, 65%);
+    --color_danger: hsl(0, 95%, 65%);
+    --color_black: hsl(252, 30%, 10%);
+
+    --border_radius: 15px;
+    --card_border_radius: 1rem;
+    --btn_padding: 0.4rem 1.2rem;
+    --card_padding: 1rem;
+
+    --sticky_top_left: 5.4rem;
+    --sticky_top_right: -18rem;
+}
+
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    /* xóa những mặc định trình duyệt mà web tự thêm */
+    box-sizing: border-box;
+    /* giúp các thẻ margin padding vẫn đủ kích thước */
+}
+
+html{
+    font-size: 16px;
+    /* neu ko khai bao font sixe thi mawc dinh trinh duyet laf 16px 
+    1 rem = 16px */
+}
+
+.body {
+    color: #212529;
+    background-color: rgba(245, 222, 179, 0.503);
+    letter-spacing: 1px;
+}
+
+.voucher__title {
+    top: -15px;
+    width: 100%;
+    text-align: center;
+}
+
+.voucher__name {
+    box-shadow: 0 0 20px 9px #ff61241f;
+    font-size: 80%;
+}
+
+.voucher__item img{
+    cursor: pointer;
+}
+
+.voucher__item:hover {
+    box-shadow: 0 0 20px 9px #ff61241f;
+}
+
+.voucher__term{
+    padding: 3rem 3rem 0 3rem;
+}
+.voucher__term h3{
+    font-weight: bold;
+    margin: 1rem 0;
+}
+.voucher__term li{
+    margin-top: 0.7rem;
+}
+@media screen and (max-width:768px){
+    .voucher__term li{
+        font-size: 2vw;
+    }
+}

@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --color_dark: hsl(252, 30%, 27%);
+    --color_white: hsl(252, 30%, 100%);
+    --color_light: hsl(252, 30%, 95%);
+    --color_gray: hsl(252, 15%, 65%);
+    --color_primary: #3a114c;
+
+    --border_radius: 2rem;
+    --card_border_radius: 1rem;
+    --btn_padding: 0.6rem 2rem;
+    --search_padding: 0.6rem 1rem;
+    --card_padding: 1rem;
+
+    --sticky_top_left: 5.4rem;
+    --sticky_top_right: -18rem;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color_dark);
+    background: var(--color_light);
+    overflow-x: hidden;
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.profile_picture img {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--btn_padding);
+    font-weight: 500;
+    border-radius: var(--border_radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn_primary {
+    background: var(--color_primary);
+    color: white;
+    white-space: nowrap;
+}
+
+.text_bold {
+    font-weight: 500;
+}
+
+.text_muted {
+    color: var(--color_gray);
+}
+
+/* Main part */
+main {
+    position: relative;
+    top: 5.4rem;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: 18vw auto 18vw;
+    column-gap: 2rem;
+    position: relative;
+}
+
+
+/* Left */
+
+main .container .left {
+    height: max-content;
+    position: sticky;
+    top: var(--sticky_top_left);
+}
+
+main .container .left .profile {
+    padding: var(--card_padding);
+    background: var(--color_white);
+    border-radius: var(--card_border_radius);
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.left .sidebar {
+    margin-top: 1rem;
+    background: var(--color_white);
+    border-radius: var(--card_border_radius);
+}
+
+.left .sidebar .menu_item {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+}
+
+.left .sidebar .menu_item:hover {
+    background: var(--color_light);
+}
+
+.left .sidebar i {
+    font-size: 1.4rem;
+    color: var(--color_gray);
+    margin-left: 2rem;
+    position: relative;
+}
+
+.left .sidebar h3 {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #3a114c;
+}
+
+.left .sidebar .active {
+    background: var(--color_light);
+}
+
+.left .sidebar .active h3, .left .sidebar .active i {
+    color: var(--color_primary);
+}
+
+.left .sidebar .active::before {
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background: var(--color_primary);
+}
+
+.left .sidebar .menu_item:first-child.active {
+    border-top-left-radius: var(--card_border_radius);
+    overflow: hidden;
+}
+
+.left .sidebar .menu_item:last-child.active {
+    border-bottom-left-radius: var(--card_border_radius);
+    overflow: hidden;
+}
+
+.left .btn {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.user_table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+}
+
+/* Search part */
+.search_user {
+    margin-top: 1rem;
+    background: hsl(252, 30%, 95%);
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    border: 1px solid #3a114c;
+}
+
+.search_user input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: hsl(252, 30%, 27%);
+}
+
+.search_user input[type="search"]::placeholder {
+    color: hsl(252, 15%, 65%);
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+.btn_primary {
+    background: #3a114c;
+    color: white;
+    white-space: nowrap;
+}
+
+/* Table part */
+.content_table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 800px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content_table thead tr {
+    background-color: #3a114c;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content_table th, .content_table td {
+    padding: 6px 8px;
+}
+
+.content_table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content_table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.content_table tbody tr:last-of-type {
+    border-bottom: 2px solid #3a114c;
+}
+
+.content_table tbody tr:hover {
+    font-weight: bold;
+    color: #3a114c;
+}
+
+.content_table tbody .user_images {
+    width: 200px;
+    height: 200px;
+}
+
+/* Pagination part */
+.user_table #user_pagination, .user_table #order_pagination, .user_table #food_pagination {
+    display: flex;
+    border: 1px solid #3a114c;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10rem;
+}
+
+.user_table #user_pagination button, .user_table #food_pagination button, .user_table #order_pagination button {
+    width: 30px;
+    background-color: white;
+    border-right: 1px solid #3a114c;
+    text-align: center;
+}
+
+.user_table #user_pagination button:hover, .user_table #order_pagination button:hover, .user_table #food_pagination button:hover {
+    background-color: #3a114c;
+    color: white;
+}
+
+/* RESET PASSWORD SECTION */
+.form_title {
+    border-bottom: 2px solid var(--color_light);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.form_title #close_btn {
+    position: absolute;
+    right: 0.2rem;
+    top: 0.1rem;
+}
+
+.user_infor {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.password_change {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.password_change input[type='text'] {
+    border: 1px solid #3a114c;
+    border-radius: 4px;
+    width: 200px;
+    height: 2rem;
+}
+
+.upload_image > input[type='submit'] {
+    float: right;
+}
